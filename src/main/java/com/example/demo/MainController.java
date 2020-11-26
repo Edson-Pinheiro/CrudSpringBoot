@@ -39,13 +39,13 @@ public class MainController {
 	}
 
 	@GetMapping(path="/cliente/all")// busca todos clientes
-	public @ResponseBody Iterable<Cliente> getAllAuthors() {
+	public @ResponseBody Iterable<Cliente> getAllCliente() {
 		return cliRepository.findAll();
 	}
 
 		
 	@PutMapping("/cliente/update") // procura e altera o cliente
-	public @ResponseBody String updateOneAuthor(@RequestParam Integer cpf , 
+	public @ResponseBody String updateOneCliente(@RequestParam Integer cpf , 
 			                                    @RequestParam String nome) {
 		
 		Optional<Cliente> foundCliente = cliRepository.findById(cpf);
